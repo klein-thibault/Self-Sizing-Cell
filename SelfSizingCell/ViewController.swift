@@ -8,18 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.collectionView.registerNib(UINib(nibName: "SelfSizedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SelfSizedCollectionViewCell")
+
+        let flowLayout: UICollectionViewFlowLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        flowLayout.estimatedItemSize = CGSizeMake(UIScreen.mainScreen().bounds.width, 200)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK:
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
     }
 
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCellWithReuseIdentifier("SelfSizedCollectionViewCell", forIndexPath: indexPath) as! UICollectionViewCell
+    }
 
 }
 
