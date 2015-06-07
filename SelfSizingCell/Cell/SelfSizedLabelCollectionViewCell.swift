@@ -1,5 +1,5 @@
 //
-//  SelfSizedCollectionViewCell.swift
+//  SelfSizedLabelCollectionViewCell.swift
 //  SelfSizingCell
 //
 //  Created by Thibault Klein on 6/7/15.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class SelfSizedCollectionViewCell: UICollectionViewCell {
+class SelfSizedLabelCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var selfSizedLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

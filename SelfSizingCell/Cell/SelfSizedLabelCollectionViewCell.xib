@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelfSizedLabelCollectionViewCell" id="gTV-IL-0wX" customClass="SelfSizedLabelCollectionViewCell" customModule="SelfSizingCell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnk-sx-chO">
+                        <rect key="frame" x="15" y="15" width="370" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Fnk-sx-chO" secondAttribute="trailing" constant="15" id="Wif-1h-xhN"/>
+                <constraint firstItem="Fnk-sx-chO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="cV2-o4-0DQ"/>
+                <constraint firstItem="Fnk-sx-chO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="dAD-zE-Ude"/>
+                <constraint firstAttribute="bottom" secondItem="Fnk-sx-chO" secondAttribute="bottom" constant="15" id="iwZ-9E-cxi"/>
+            </constraints>
+            <connections>
+                <outlet property="selfSizedLabel" destination="Fnk-sx-chO" id="tbk-b5-ddJ"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
